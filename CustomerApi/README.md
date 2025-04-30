@@ -35,6 +35,13 @@ The API will be available by default at:
 
 - http://localhost:5000
 
+## Live Demo
+
+The Customer API is deployed and available at:
+
+**https://testcustomerapi.azurewebsites.net/api/customers**
+
+
 ## Example POST Request
 
 `POST http://localhost:5000/customers`
