@@ -7,7 +7,6 @@ using CustomerApi.Infrastructure.Persistence;
 using CustomerApi.Infrastructure.Persistence.Interfaces;
 using FluentValidation;
 using CustomerApi.Application.Services.Interfaces;
-using CustomerApi.Infrastructure.Settings;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
