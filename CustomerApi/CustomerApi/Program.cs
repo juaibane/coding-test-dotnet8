@@ -32,9 +32,6 @@ builder.Services.AddScoped<IValidator<CustomerDto>, CustomerDtoValidator>();
 builder.Services.AddScoped<IValidator<List<CustomerDto>>, CustomerListValidator>();
 builder.Services.AddScoped<ICustomerBusinessRules, CustomerBusinessRules>();
 
-// Storage appsettings.json
-builder.Services.Configure<StorageOptions>(builder.Configuration.GetSection("Storage"));
-
 // Repositories
 builder.Services.AddScoped<ICustomerRepository, SQLiteCustomerRepository>();
 
