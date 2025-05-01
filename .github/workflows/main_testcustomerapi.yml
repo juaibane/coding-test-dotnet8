@@ -59,11 +59,11 @@ jobs:
 
       - name: Configure App Service
         run: |
-          az webapp config appsettings set \
-            --name testCustomerApi \
-            --resource-group test \
-            --settings \
-              WEBSITE_RUN_FROM_PACKAGE=0 \
+            az webapp config appsettings set `
+            --name testCustomerApi `
+            --resource-group test `
+            --settings `
+              WEBSITE_RUN_FROM_PACKAGE=0 `
               ASPNETCORE_ENVIRONMENT=Production
       
       - name: Deploy to Azure Web App
