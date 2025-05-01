@@ -269,3 +269,8 @@ __pycache__/
 
 # Publish outputs
 **/publish
+
+# SQLite databases
+**/Data/*.db
+**/Data/*.db-shm
+**/Data/*.db-wal
