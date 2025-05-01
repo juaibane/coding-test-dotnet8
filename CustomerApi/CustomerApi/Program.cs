@@ -11,6 +11,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+string dataPath = Path.Combine(builder.Environment.ContentRootPath, "Data");
+Directory.CreateDirectory(dataPath);
+
 // Configure EF Core with SQLite
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite")));
