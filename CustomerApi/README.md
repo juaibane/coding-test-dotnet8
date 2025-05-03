@@ -39,27 +39,66 @@ The API will be available by default at:
 
 The Customer API is deployed on Azure App Service and available at:
 
-**https://testcustomerapi.azurewebsites.net/api/customers**
+**[https://testcustomerapi.azurewebsites.net/api/customers](https://testcustomerapi.azurewebsites.net/api/customers)**
 
+## API Reference
 
-## Example POST Request
+### GET /customers
 
-`POST http://localhost:5000/customers`
+**Description:** Returns the full list of stored customers.
 
-```json
-[
-  {
-    "firstName": "Leia",
-    "lastName": "Chan",
-    "age": 25,
-    "id": 1
-  },
-  {
-    "firstName": "Frank",
-    "lastName": "Powell",
-    "age": 30,
-    "id": 2
-  }
-]
-```
+* **Method:** `GET`
+* **URL:** `/customers`
+* **Response (200 OK):**
+
+  ```json
+  [
+    {
+      "firstName": "Leia",
+      "lastName": "Chan",
+      "age": 25,
+      "id": 1
+    },
+    {
+      "firstName": "Frank",
+      "lastName": "Powell",
+      "age": 30,
+      "id": 2
+    }
+  ]
+  ```
+
+### POST /customers
+
+**Description:** Accepts a list of customers, validates them, and inserts them in sorted order.
+
+* **Method:** `POST`
+* **URL:** `/customers`
+* **Headers:** `Content-Type: application/json`
+* **Request Body:**
+
+  ```json
+  [
+    {
+      "firstName": "Leia",
+      "lastName": "Chan",
+      "age": 25,
+      "id": 1
+    },
+    {
+      "firstName": "Frank",
+      "lastName": "Powell",
+      "age": 30,
+      "id": 2
+    }
+  ]
+  ```
+* **Responses:**
+
+  * **201 Created:** Customers successfully inserted.
+  * **400 Bad Request:** Invalid data.
+
+## Deployment (CI/CD)
+
+A GitHub Actions workflow automatically builds, and deploys the API to Azure App Service when changes are pushed to the `main` branch.
 

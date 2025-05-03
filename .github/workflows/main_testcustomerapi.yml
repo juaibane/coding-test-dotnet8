@@ -13,6 +13,7 @@ env:
   PROJECT_PATH: 'CustomerApi/CustomerApi/CustomerApi.csproj'
   SOLUTION_PATH: 'CustomerApi/CustomerApi.sln'
   PUBLISH_OUTPUT: 'publish'
+  DB_DIR: 'Data'
 
 jobs:
   build:
@@ -30,7 +31,10 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build ${{ env.SOLUTION_PATH }} --configuration Release
-
+      
+      - name: Create database directory
+        run: mkdir "${{ env.PUBLISH_OUTPUT }}\${{ env.DB_DIR }}"
+          
       - name: dotnet publish
         run: dotnet publish ${{ env.PROJECT_PATH }} -c Release -o ${{ env.PUBLISH_OUTPUT }} --no-build
 
