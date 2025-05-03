@@ -24,6 +24,14 @@ Each project includes its own detailed README.
 
 ---
 
+## Deployment
+
+CustomerApi is hosted on Azure App Service and reachable at:
+
+**https://testcustomerapi.azurewebsites.net/api/customers**
+
+---
+
 ## Getting Started
 
 To get started, clone the repository:
@@ -32,10 +40,6 @@ To get started, clone the repository:
 # Clone repository
 git clone https://github.com/juaibane/coding-test-dotnet8.git
 
+```
 
-## Deployment
-
-CustomerApi is hosted on Azure App Service and reachable at:
-
-**https://testcustomerapi.azurewebsites.net/api/customers**
 

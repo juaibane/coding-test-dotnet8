@@ -37,7 +37,7 @@ The API will be available by default at:
 
 ## Live Demo
 
-The Customer API is deployed and available at:
+The Customer API is deployed on Azure App Service and available at:
 
 **https://testcustomerapi.azurewebsites.net/api/customers**
 
